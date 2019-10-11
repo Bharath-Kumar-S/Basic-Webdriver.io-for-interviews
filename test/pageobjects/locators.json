@@ -1,0 +1,16 @@
+{
+    "Homepage": {
+        "from": "#gosuggest_inputSrc",
+        "to": "#gosuggest_inputDest",
+        "date": "#departureCalendar",
+        "search": "#gi_search_btn",
+        "roundtrip_btn": "#roundTrip",
+        "oneway_btn": "#oneway",
+        "multiCity_btn": "#multiCity",
+        "returndate": "#returnCalendar",
+        "categ": "#pax_link_common"
+    },
+    "search":{
+        "results_rate": "//*[contains(@data-cy,\"flightItem\")]//*[@data-cy=\"finalPrice\"]"
+    }
+}

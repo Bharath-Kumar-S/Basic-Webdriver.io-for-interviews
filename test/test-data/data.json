@@ -1,0 +1,9 @@
+{
+    "Url": "http://www.goibibo.com/",
+    "search": {
+        "from": "Bengaluru (BLR)",
+        "to": "Mumbai (BOM)",
+        "date": "20191012"
+    },
+    "sort": "aes"
+}
