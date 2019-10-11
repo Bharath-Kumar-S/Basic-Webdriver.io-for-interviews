@@ -14,15 +14,7 @@ describe('Goibibo test', () => {
   })
 
   it('verify if GoIbibo homepage works as expected', async () => {
-    await help.isexisting(loc.Homepage.from)
-    await help.isexisting(loc.Homepage.to)
-    await help.isexisting(loc.Homepage.date)
-    await help.isexisting(loc.Homepage.search)
-    await help.isexisting(loc.Homepage.roundtrip_btn)
-    await help.isexisting(loc.Homepage.oneway_btn)
-    await help.isexisting(loc.Homepage.multiCity_btn)
-    await help.isexisting(loc.Homepage.returndate)
-    await help.isexisting(loc.Homepage.categ)
+    await expect(lib.check_goibibo_page()).eventually.to.equal(true);
   })
 
   it('Should book a ticket', async () => {

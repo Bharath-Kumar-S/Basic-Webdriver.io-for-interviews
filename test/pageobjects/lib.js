@@ -31,7 +31,7 @@ class lib {
 
     async bookticket() {
 
-        return new Promise(async(resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
             await help.setValue(loc.Homepage.from, data.search.from);
             let t1 = (data.search.from).split(" ");
             await help.click(`//span[normalize-space()='${t1[1]}']`);
@@ -43,14 +43,29 @@ class lib {
             await help.click(loc.Homepage.search);
             await help.waitForElementVisible(loc.search.results_rate);
             let result = await help.exist(loc.search.results_rate);
-            if(result === true){
+            if (result === true) {
                 return resolve(true);
             }
-            else{
+            else {
                 return resolve(false);
             }
         })
 
+    }
+
+    async check_goibibo_page() {
+        return new Promise(async (resolve, reject) => {
+            await help.isexisting(loc.Homepage.from)
+            await help.isexisting(loc.Homepage.to)
+            await help.isexisting(loc.Homepage.date)
+            await help.isexisting(loc.Homepage.search)
+            await help.isexisting(loc.Homepage.roundtrip_btn)
+            await help.isexisting(loc.Homepage.oneway_btn)
+            await help.isexisting(loc.Homepage.multiCity_btn)
+            await help.isexisting(loc.Homepage.returndate)
+            await help.isexisting(loc.Homepage.categ)
+            return resolve(true);
+        })
     }
 
 }
