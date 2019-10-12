@@ -8,7 +8,8 @@
         "oneway_btn": "#oneway",
         "multiCity_btn": "#multiCity",
         "returndate": "#returnCalendar",
-        "categ": "#pax_link_common"
+        "categ": "#pax_link_common",
+        "change_src_dest_btn": "//*[contains(@class,\"hypflt-swp\")]"
     },
     "search":{
         "results_rate": "//*[contains(@data-cy,\"flightItem\")]//*[@data-cy=\"finalPrice\"]"

@@ -21,7 +21,8 @@ class helpers {
     async setValue(element, text) {
         await this.waitForElementEditable(element, 10000)
         let a = await browser.$(element);
-        await a.setValue(text)
+        a.clearValue()
+        a.setValue(text)
     }
 
 
@@ -29,11 +30,12 @@ class helpers {
     async click(element) {
         await this.waitForElementVisible(element, 10000)
         let a = await browser.$(element);
-        await a.click();
+        a.click();
     }
 
-    async get_rates() {
-
+    async gettext(element) {
+        let a = await browser.$(element);
+        return a.getText();
     }
 
     async getTitle() {
@@ -51,7 +53,7 @@ class helpers {
     //final
     async check_radio_box(element) {
         let a = await browser.$(element);
-        await a.click();
+        a.click();
     }
 
     //final

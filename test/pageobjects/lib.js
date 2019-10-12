@@ -18,9 +18,11 @@ class lib {
             let rates = [];
             rate.forEach(async (v, index) => {
                 rates.push(await v.getText())
-                if (index === rates.length - 1) {
-                    if (rates === rates.sort())
+                if (index == rate.length - 1) {
+                    if (rates === rates.sort()) {
+                        console.log(`${index} : ${rates}`);
                         resolve(true);
+                    }
                     else
                         resolve(false);
                 }
@@ -64,7 +66,32 @@ class lib {
             await help.isexisting(loc.Homepage.multiCity_btn)
             await help.isexisting(loc.Homepage.returndate)
             await help.isexisting(loc.Homepage.categ)
-            return resolve(true);
+            let a = await this.swap_destination_source()
+            return resolve(a);
+        })
+    }
+
+    async swap_destination_source() {
+        return new Promise(async (resolve, reject) => {
+            await help.setValue(loc.Homepage.from, data.search.from);
+            let t1 = (data.search.from).split(" ");
+            await help.click(`//span[normalize-space()='${t1[1]}']`);
+            await help.setValue(loc.Homepage.to, data.search.to);
+            t1 = (data.search.to).split(" ");
+            await help.click(`//span[normalize-space()='${t1[1]}']`);
+            await help.click(loc.Homepage.date);
+            await help.click(`#fare_${data.search.date}`);
+            let src = await help.gettext(loc.Homepage.from);
+            let des = await help.gettext(loc.Homepage.to);
+            await help.click(loc.Homepage.change_src_dest_btn);
+            let src1 = await help.gettext(loc.Homepage.from);
+            let des1 = await help.gettext(loc.Homepage.to);
+            if ((src == des1) && (des == src1)) {
+                return resolve(true);
+            }
+            else {
+                return resolve(false);
+            }
         })
     }
 
