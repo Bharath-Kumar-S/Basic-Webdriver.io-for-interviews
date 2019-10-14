@@ -114,6 +114,8 @@ In the project folder run the below command. test is a script command in package
 npm run test
 ```
 
+![Alt text](dir.PNG?raw=true "Title")
+
 ## Built With
 
 * [Webdriver.io](https://webdriver.io/) - The Nextgen Javascript automation framework
