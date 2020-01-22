@@ -157,7 +157,8 @@ class helpers {
     async isexisting(element) {
         let a = await browser.$(element);
         let exist = await a.isExisting();
-        expect(exist).to.equal(true)
+        return exist;
+        // expect(exist).to.equal(true)
     }
 
     async is_notexisting(element) {

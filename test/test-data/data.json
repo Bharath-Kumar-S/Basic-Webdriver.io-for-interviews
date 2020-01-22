@@ -3,7 +3,8 @@
     "search": {
         "from": "Bengaluru (BLR)",
         "to": "Mumbai (BOM)",
-        "date": "20191020"
+        "date": "20191020",
+        "Month": "20191101"
     },
     "sort": "aes"
 }

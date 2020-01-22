@@ -9,7 +9,10 @@
         "multiCity_btn": "#multiCity",
         "returndate": "#returnCalendar",
         "categ": "#pax_link_common",
-        "change_src_dest_btn": "//*[contains(@class,\"hypflt-swp\")]"
+        "change_src_dest_btn": "//*[contains(@class,\"hypflt-swp\")]",
+        "date_by_rates": "//*[@id=\"price_2019MMDD\"]",
+        "Next_Month_btn":"//*[contains(@class,\"DayPicker-NavButton--next\")]",
+        "rates":"//*[contains(@id,\"price_201911\")]"
     },
     "search":{
         "results_rate": "//*[contains(@data-cy,\"flightItem\")]//*[@data-cy=\"finalPrice\"]"

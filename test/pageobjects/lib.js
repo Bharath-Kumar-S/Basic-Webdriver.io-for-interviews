@@ -71,6 +71,35 @@ class lib {
         })
     }
 
+    async bookticket_Lowest_fares() {
+
+        return new Promise(async (resolve, reject) => {
+            await help.setValue(loc.Homepage.from, data.search.from);
+            let t1 = (data.search.from).split(" ");
+            await help.click(`//span[normalize-space()='${t1[1]}']`);
+            await help.setValue(loc.Homepage.to, data.search.to);
+            t1 = (data.search.to).split(" ");
+            await help.click(`//span[normalize-space()='${t1[1]}']`);
+            await help.click(loc.Homepage.date);
+            let Month_visible = await help.isexisting(`#fare_${data.search.Month}`);
+            if (Month_visible === false) {
+                await help.click(loc.Homepage.Next_Month_btn);
+            }
+            else {
+                let rates_along_dates = {};
+                // rates_along_dates['date'] = 2001;
+
+                let a = await browser.$$(loc.Homepage.rates);
+                a.forEach();
+
+
+
+            }
+
+        });
+
+    }
+
     async swap_destination_source() {
         return new Promise(async (resolve, reject) => {
             await help.setValue(loc.Homepage.from, data.search.from);
