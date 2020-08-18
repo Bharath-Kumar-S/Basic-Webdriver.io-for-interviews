@@ -124,10 +124,6 @@ npm run test
 * [Babel](https://babeljs.io/) - Javascript Nextgen compiler
 * [Git](https://github.com) - Version control
 
-## Versioning
-
-Github is used for versioning. But it is not yet uploaded to the remote origin.
-
 ## Authors
 
 * **Bharath Kumar S** - *Initial work* - [Automation](https://github.com/Bharath-Kumar-S)
